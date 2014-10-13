@@ -1,0 +1,2361 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" rel="stylesheet" href="css/jquery.mobile-1.3.2.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0-rc.1.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<script src="js/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="../source/scripts/js.js"></script>
+	<script type="text/javascript" src="../source/scripts/ui.js"></script>
+	<script src="jquery-1.4.4.min.js" type="text/javascript"></script>
+	
+		<style>
+div.ex {
+    width: 93%;
+    padding: 10px;
+    border: 5px solid white;
+    margin: auto;
+}
+#forImage{
+width: 93%;
+    padding: 10px;
+	border: 5px solid white;
+    margin: auto;
+	height:100px;
+}
+#togglethis{
+width: 93%;
+    padding: 10px;
+	border: 5px solid white;
+    margin: auto;
+	height:100%;
+}
+
+#btnPlay,#logout,#leaderBoard,#	help{
+width: 90%;
+    padding: 10px;
+	border: 5px solid #08387c;
+	background-color:#08387c;
+    margin: auto;
+	height:50px;
+	margin-left:auto;
+	margin-top:auto;
+	font-size: 40px;
+}
+
+#btnStartAnimals{
+width: 90%;
+    padding: 10px;
+	border: 5px solid #bd0613;
+	background-color:#bd0613;
+    margin: auto;
+	height:100%;
+	margin-left:auto;
+	margin-top:auto;
+}
+#homeBg{
+	position:fixed;
+	height:100%;
+	width:100%;
+	background-image:url(css/bg.png);
+	background-position: top center;
+	background-size: cover;
+}
+#result,#gameBg,#bgScores{
+	position:fixed;
+	height:100%;
+	width:100%;
+	background-image:url(css/bg.png);
+	background-position: top center;
+	background-size: cover;
+	
+}
+
+#relative,#relative2,#relative3 {
+    position: relative;
+    top: 10px;
+	color:#ebfe1c;
+}
+	</style>
+	</head>
+	<body>
+	
+<!--MAIN PAGE-->
+<div data-role="page" id="index" data-theme="f" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+ <div data-role="content" align="center" >
+	<br />
+	<img src="images/kit.png" width="100%">
+ </div>
+<div style=" margin: 5%; width: 90%; height: 90%">
+	<a href="#menu" data-role="button" data-transition="pop" data-icon="carat-r" data-iconpos="right" data-theme="b">MENU</a>
+	<a href="#game" data-role="button" data-transition="pop" data-icon="carat-r" data-iconpos="right" data-theme="b">PLAY GAME</a>
+
+
+</div>
+</div>
+
+<!--Menu-->
+<div data-role="page" id="menu" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+	<div data-role="content">
+		<div data-role="content" >
+		<h2 align="center" style="color:#10bd8e;">Moral Stories</h2>
+
+			<ul data-role="listview" data-theme="e">
+			<li><a href="#list2"><h5>Chapter 1</h5></a></li>
+			<li><a href="#list3"><h5>Chapter 2</h5></a></li>
+			<li><a href="#list4"><h5>Chapter 3</h5></a></li>
+			<li><a href="#list5"><h5>Chapter 4</h5></a></li>		
+			</ul>
+			</div>
+		</div>
+	<div data-role="footer" data-position="fixed" data-theme="b">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+
+<div data-role="page" id="list2" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>Chapter 1</b></h2>
+			<ul data-role="listview" data-theme="e">
+	<li><a href="#story1">The Peasant</a></li>
+    <li><a href="#story2">The Lion</a></li>
+    <li><a href="#story3">A Hunter, a Deer, a Pig, a Snake and a Jackal</a></li>
+    <li><a href="#story4">The Two Parrots</a></li>
+    <li><a href="#story5">The Four Travellers</a></li>
+	</ul>
+	</div>
+<div data-role="footer" data-position="fixed" data-theme="b">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#menu" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="list3" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>Chapter 2</b></h2>
+			<ul data-role="listview" data-theme="e">
+			<li><a href="#story6">An Old Tiger and a Greedy Traveller</a></li>
+    <li><a href="#story7">A Rich Mouse and a Holy Man</a></li>
+    <li><a href="#story8">The Lion Going to War</a></li>
+    <li><a href="#story9">The Master and his Student</a></li>
+    <li><a href="#story10">The Farmer’s Wife and the Crow</a></li>
+	</ul>
+	</div>
+<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#menu" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="list4" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>Chapter 3</b></h2>
+			<ul data-role="listview" data-theme="e">
+			 <li><a href="#story11">The Trooper and his Horse</a></li>
+    <li><a href="#story12">The Hodge and the Crow</a></li>
+    <li><a href="#story13">The Two Lizards</a></li>
+    <li><a href="#story14">Hospital Window</a></li>
+    <li><a href="#story15">The Proud Lady and the Caterpillar</a></li>
+	</ul>
+	</div>
+<div data-role="footer" data-position="fixed" data-theme="b">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#menu" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+
+<div data-role="page" id="list5" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>Chapter 4</b></h2>
+			<ul data-role="listview" data-theme="e">
+			 <li><a href="#story16">The Paper Kite</a></li>
+    <li><a href="#story17">The Clever Wife</a></li>
+    <li><a href="#story18">The Mice who Travelled</a></li>
+    <li><a href="#story19">The Dogs</a></li>
+    <li><a href="#story20">The Parrot</a></li>
+	</ul>
+	</div>
+<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#menu" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="story1" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>The Peasant</b></h2>
+			<p align="justify"  >&nbsp;&nbsp;&nbsp;The Roman Kingdom was growing bigger. Roman soldiers controlled the cities that they won. Next, the Romans won a small village on River Danube. Seeing the cruelty of the Roman rulers, a poor villager decided to meet the Roman Ministers.
+The Villager was an ugly, hairy man. He had thick eyebrows and lips. He had a crooked nose and a squint in his eye! But, he bravely, faced the Roman Ministers. Everyone wondered what this ugly Villager would say.
+The Villager asked the Romans, “Why are you killing everyone and taking their lands? Why are you robbing the people and living in style? People were so afraid that they have left their homes and are hiding. The Romans are spoiling everything, instead of making life better.”
+“Please go back! We do not like the way the Romans
+treat us! We were happy before you Romans came!” <br />
+&nbsp;&nbsp;&nbsp;The Romans were amazed at his wonderful speech. The Villager was right!
+They made the Villager, the Governor, and called the Roman soldiers back! They also wanted his speech written down for others to read.
+The city on the River Danube was happy again.
+			</p>
+	</div>
+	
+	<p><a href="#s1" class="ui-btn ui-shadow ui-corner-all">Moral Lesson</a></p>
+			<div data-role="footer" data-position="fixed" data-theme="b">
+					<div data-role="navbar" >
+					<ul>
+								
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#list2" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+								
+					</ul>
+					</div>
+		</div>
+</div>
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="s1" data-theme="b">
+
+	<div data-role="header">
+		<h1>Moral Lesson</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p align="justify"  >Do not judge anyone by the way he looks.</p>
+		
+
+	
+</div><!-- /page two -->
+<div data-role="footer" data-position="fixed" data-theme="b">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#story1" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="story2" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>The Lion</b></h2>
+			<p align="justify"  >&nbsp;&nbsp;&nbsp;King Leopard happily ruled over his Kingdom.
+However, one day, a Lion Cub was born in a distant part of the Kingdom. The Leopard felt sorry because the poor cub had no father. But the Prime Minister, the Fox, knew that when the Lion Cub grew up, there would be trouble. Lions always respect friendship and never fight needlessly with other animals. So, he advised the Leopard, “It is wise to be friendly with the Lion Cub to control his power.”
+King Leopard did not listen. Many years passed. The Cub grew into a big Lion! He was brave, watchful and clever. He began to show his power. The Fox begged the Leopard again, “Before he destroys us fully, please        give  the Lion a part of the Kingdom, some oxen and other animals to feed on. We can live safely in the other part of the Kingdom.”
+“No, I will not give him any part of my Kingdom!” the Leopard again refused the Fox’s advice.
+Very soon, the Lion became so powerful that he slowly won the Leopard’s Kingdom and became King, instead!
+			</p>
+	</div>
+	
+	<p><a href="#s2" class="ui-btn ui-shadow ui-corner-all">Moral Lesson</a></p>
+			<div data-role="footer" data-position="fixed" data-theme="b">
+					<div data-role="navbar" >
+					<ul>
+								
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#list2" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+								
+					</ul>
+					</div>
+		</div>
+</div>
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="s2" data-theme="b">
+
+	<div data-role="header">
+		<h1>Moral Lesson</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p align="justify"  >If there is a strong person in your life, make sure he is your friend!</p>
+		
+
+	
+</div><!-- /page two -->
+<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#story2" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+
+<div data-role="page" id="story3" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>A Hunter, a Deer, a Pig, a Snake and a Jackal</b></h2>
+			<p align="justify"  >&nbsp;&nbsp;&nbsp;Once upon a time, a Hunter lived in a forest. One morning, he set out hunting, hoping to find a deer.
+Soon, he saw a Deer and hunted him down. The Hunter slung him over his shoulder and merrily started home.
+On the way, he came across a fat Pig. He dropped the Deer on the ground and shot the Pig with an arrow.
+The Pig gave a fearful grunt and charged at the Hunter. He hit the Hunter hard in the stomach and killed him instantly. Then the wounded Pig also fell down dead.
+During the fight, a Snake that was passing by got trampled and died.<br />
+&nbsp;&nbsp;&nbsp;All this time, a Jackal was sitting behind a tree.
+When he saw the Hunter, Deer, Pig and Snake, all lying dead, he was overjoyed and said to himself, “Ah! What luck! It looks as though I am going to have a feast, but I shall eat only a little at a time so it will last me longer.”
+Then, the Jackal dragged each body to his cave, one by one. He had a feast for a long time!
+			</p>
+	</div>
+	
+	<p><a href="#s3" class="ui-btn ui-shadow ui-corner-all">Moral Lesson</a></p>
+			<div data-role="footer" data-position="fixed" data-theme="b">
+					<div data-role="navbar" >
+					<ul>
+								
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#list2" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+								
+					</ul>
+					</div>
+		</div>
+</div>
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="s3" data-theme="b">
+
+	<div data-role="header">
+		<h1>Moral Lesson</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p align="justify"  >Be patient and think wisely.</p>
+		
+
+	
+</div><!-- /page two -->
+<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#story3" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="story4" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>The Two Parrots</b></h2>
+			<p align="justify"  >&nbsp;&nbsp;&nbsp;Once upon a time, there lived a King, his Son and two Parrots. The Prince and the Baby Parrot were very fond of each other and grew up together.
+The Prince was fond of birds. So, one day, he petted a Sparrow in the garden. The Parrot did not like it, as the Sparrow was his enemy.<br />
+One day, while they were playing together, there arose a fight and the Parrot pecked the Sparrow. The shocked Prince picked the dead Sparrow and in anger, killed the Parrot.
+&nbsp;&nbsp;&nbsp;&nbsp;The father of the Baby Parrot heard the sad news that his son was dead. He attacked the Prince and pierced both his eyes. Then he flew to a tall tree for safety.
+The Prince requested the Parrot, “Forget all that has happened, and please return.”<br />
+&nbsp;&nbsp;&nbsp;The King added, “It is destiny that has brought such a sad tragedy. That your child should die and mine become BLIND.”
+The Parrot replied, “How can I trust you, after what has happened? It’s better for me to be far from you, than to experience your love turned to hate.”
+			</p>
+	</div>
+	
+	<p><a href="#s4" class="ui-btn ui-shadow ui-corner-all">Moral Lesson</a></p>
+			<div data-role="footer" data-position="fixed" data-theme="b">
+					<div data-role="navbar" >
+					<ul>
+								
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#list2" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+								
+					</ul>
+					</div>
+		</div>
+</div>
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="s4" data-theme="b">
+
+	<div data-role="header">
+		<h1>Moral Lesson</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p align="justify"  >Do not trust a revengeful person.</p>
+		
+
+	
+</div><!-- /page two -->
+<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#story4" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="story5" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>The Four Travellers</b></h2>
+			<p align="justify"  >&nbsp;&nbsp;&nbsp;Once upon a time, a Merchant, a Noble, a Shepherd and a Prince were travelling on the sea. Suddenly, a storm occurred. The four travellers were thrown by the waves on an unknown island.
+Their clothes were torn and they had lost all their belongings.
+The Prince started crying, “This is all because of our sad fate.”<br />
+&nbsp;&nbsp;&nbsp;The Shepherd said, “Forget about what has happened. Now think of what to do next. We will not gain anything by crying, but if we work hard, we could go home or maybe live here and make a good home here.”
+The other three, at once, agreed with the Shepherd. They started thinking what they could do best. The Merchant and the Prince decided to teach. The Noble said he would open schools for the subjects they taught.
+The simple Shepherd then said, “Why talk so impractically, are we to starve till then? Think of something you can do now and here!”
+Then he went into the forest and brought a bundle of twigs and took it to the market to sell. With the money from the sale they were able to buy some food.
+
+			</p>
+	</div>
+	
+	<p><a href="#s5" class="ui-btn ui-shadow ui-corner-all">Moral Lesson</a></p>
+			<div data-role="footer" data-position="fixed" data-theme="b">
+					<div data-role="navbar" >
+					<ul>
+								
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#list2" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+								
+					</ul>
+					</div>
+		</div>
+</div>
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="s5" data-theme="b">
+
+	<div data-role="header">
+		<h1>Moral Lesson</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p align="justify"  >We need to be practical to solve problems.</p>
+		
+
+	
+</div><!-- /page two -->
+<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#story5" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="story6" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>An Old Tiger and a Greedy Traveller</b></h2>
+			<p align="justify"  >&nbsp;&nbsp;&nbsp;Once, there was an old Tiger that could no longer hunt. One morning, he stood in a lake and held a blade of holy grass in one paw and a gold bracelet in the other. He was shouting, “Ladies and Gentlemen! A gold bracelet for charity.”
+A Traveller, passing by, liked the gold bracelet. However, he was scared of the Tiger.
+The Traveller said, “How can I believe that you would not harm me?” <br />
+&nbsp;&nbsp;&nbsp;The Tiger replied, “I admit that when I was young, I was wicked and killed many cows and human beings. Then a holy man advised me to give alms. So, now I take a bath and give things for the sake of charity. Besides, I’ve gone old. My teeth and claws have fallen off. So, what have you to fear from me?”
+The Traveller believed him and went into the lake, but got struck in the deep mud.
+When the Tiger saw this, he comforted him. “Oh! Don’t worry. I’ll help you,” he said, and slowly waded towards the Traveller and grabbed him.
+Soon after that, the Tiger killed the Traveller and ate him up.
+			</p>
+	</div>
+	
+	<p><a href="#s6" class="ui-btn ui-shadow ui-corner-all">Moral Lesson</a></p>
+			<div data-role="footer" data-position="fixed" data-theme="b">
+					<div data-role="navbar" >
+					<ul>
+								
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#list3" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+								
+					</ul>
+					</div>
+		</div>
+</div>
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="s6" data-theme="b">
+
+	<div data-role="header">
+		<h1>Moral Lesson</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p align="justify"  >You must not risk your life at the cost of greed.</p>
+		
+
+	
+</div><!-- /page two -->
+<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#story6" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="story7" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>A Rich Mouse and a Holy Man</b></h2>
+			<p align="justify"  >&nbsp;&nbsp;&nbsp;Once, there lived a Holy Man. He was poor and depended on alms. He would eat a little food and keep the rest in a begging bowl, hung high up on a peg. A Mouse had seen this, and used to jump up and help himself to the food.
+One day, a friend of the Holy Man visited him. After they had eaten, they started chatting. The Holy Man could not concentrate and kept tapping on the ground with a stick to scare the Mouse away.
+The friend asked, “What are you doing? Why don’t you listen to me, properly?” “Excuse me!” said the Holy Man. “It’s just that dreadful Mouse! He eats away whatever food I manage to save.” Wondering how the Mouse could jump so high, the friend said, “The Mouse must have put aside a lot of food, which must give him extraordinary energy to jump so high.”
+They then, dug and found the hoard of food that the Mouse had gathered and took it away.<br/ >
+&nbsp;&nbsp;&nbsp;The Mouse returned and found his hoard of food missing, and was very sad. He lost all interest in stealing food from the Holy Man’s bowl.
+			</p>
+	</div>
+	
+	<p><a href="#s7" class="ui-btn ui-shadow ui-corner-all">Moral Lesson</a></p>
+			<div data-role="footer" data-position="fixed" data-theme="b">
+					<div data-role="navbar" >
+					<ul>
+								
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#list3" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+								
+					</ul>
+					</div>
+		</div>
+</div>
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="s7" data-theme="b">
+
+	<div data-role="header">
+		<h1>Moral Lesson</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p align="justify"  >Identify the enemy’s source of strength to defeat him. And do not steal.</p>
+		
+
+	
+</div><!-- /page two -->
+<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#story7" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+
+<div data-role="page" id="story8" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>The Lion Going to War</b></h2>
+			<p align="justify"  >&nbsp;&nbsp;&nbsp;One day, the King of the Forest called for a meeting. He was preparing to go for war. He wanted to give each animal a responsibility.
+To the Elephant, he said, “Elephant, you should carry all the weapons of war on your back and fight
+with great strength.”<br />
+&nbsp;&nbsp;&nbsp;Then, the Lion told the Bear, “Be prepared to rush in while the war is on, we may need you if the enemy is pushing us over.”
+He said to the Fox, “Your task is to fix all the secret plots.” Then, he called the Monkey and said, “Take care that the enemies should be amused by your tricks.”
+While all the animals waited their turn, one of them said, “What
+use are the Ass and the Hare? They are too cowardly to fight. Send them home.” “No,” said the King, “everyone has a part to play. Without their help we would be incomplete.”
+<br />&nbsp;&nbsp;&nbsp;Then the King said, “The Ass shall be our trumpeter, to scare our enemy. And then the lively Hare will carry home the report of our victory.”
+In this way, the wise King got all the animals involved and ready for battle.
+
+			</p>
+	</div>
+	
+	<p><a href="#s8" class="ui-btn ui-shadow ui-corner-all">Moral Lesson</a></p>
+			<div data-role="footer" data-position="fixed" data-theme="b">
+					<div data-role="navbar" >
+					<ul>
+								
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#list3" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+								
+					</ul>
+					</div>
+		</div>
+</div>
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="s8" data-theme="b">
+
+	<div data-role="header">
+		<h1>Moral Lesson</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p align="justify"  >Everyone is gifted with a talent different from another.</p>
+		
+
+	
+</div><!-- /page two -->
+<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#story8" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+
+<div data-role="page" id="story9" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>The Master and his Student</b></h2>
+			<p align="justify"  >&nbsp;&nbsp;&nbsp;Once, a Master was walking on the banks of a river. Suddenly, he heard a cry. He ran to the
+riverside and saw his Student in the water. The Student was waving his arms and crying out loud. When he saw the Master, he shouted, “Master! Please help me. I will drown in the river.”
+The Master asked his Student to stay calm. He said, “Son! Do not panic! I shall find a way to bring you out. But how did you fall into the river?”
+The Student replied, “I was learning how to swim with the help of a log of wood. After a while, I felt I could swim without it. So, I left the log and started swimming without it. The force of the stream was very rough and I lost my balance.”
+<br />&nbsp;&nbsp;&nbsp;The Master looked around for another log of wood, and found one lying upon the bank. He threw it towards his Student and said, “Let this be a warning to you. In future, never throw away the log until you are quite sure you have learnt to swim without it.”
+
+
+			</p>
+	</div>
+	
+	<p><a href="#s9" class="ui-btn ui-shadow ui-corner-all">Moral Lesson</a></p>
+			<div data-role="footer" data-position="fixed" data-theme="b">
+					<div data-role="navbar" >
+					<ul>
+								
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#list3" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+								
+					</ul>
+					</div>
+		</div>
+</div>
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="s9" data-theme="b">
+
+	<div data-role="header">
+		<h1>Moral Lesson</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p align="justify"  >Do not make rash and hasty decisions.</p>
+		
+
+	
+</div><!-- /page two -->
+<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#story9" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="story10" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>The Farmer’s Wife and the Crow</b></h2>
+			<p align="justify"  >&nbsp;&nbsp;&nbsp;A Farmer and his Wife lived in a village. The Farmer grew vegetables on his farm. His Wife sold them in the market.
+One day, the Farmer’s Wife went to sell vegetables in the market. With the money earned from selling the vegetables, she bought some eggs.
+Then she sat on her horse to go home and carried the basket, full of eggs, in her lap. She was very excited with the profits made during the day.
+The Farmer’s Wife rode carelessly and dreamt of things she would buy with the money. Suddenly, all the eggs in the basket fell on the ground and broke.
+<br />&nbsp;&nbsp;&nbsp;The Farmer’s Wife was very unhappy. She blamed a Crow that sat on a tree branch, screeching loudly. She shouted, “Fool! Why did you make so much noise? I was surprised to hear your unpleasant voice and so all the eggs broke.”
+The Crow replied, “Lady, you were not careful while riding, and were lost in your thoughts. You should not blame me for your fault!”
+The Farmer’s Wife was ashamed of her behaviour. She realised her mistake and apologised to the Crow.
+
+
+			</p>
+	</div>
+	
+	<p><a href="#s10" class="ui-btn ui-shadow ui-corner-all">Moral Lesson</a></p>
+			<div data-role="footer" data-position="fixed" data-theme="b">
+					<div data-role="navbar" >
+					<ul>
+								
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#list3" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+								
+					</ul>
+					</div>
+		</div>
+</div>
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="s10" data-theme="b">
+
+	<div data-role="header">
+		<h1>Moral Lesson</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p align="justify"  >One should not blame others for their own faults.</p>
+		
+
+	
+</div><!-- /page two -->
+<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#story10" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="story11" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>The Trooper and his Horse</b></h2>
+			<p align="justify"  >&nbsp;&nbsp;&nbsp;Once, a Trooper lived in a country. He worked in the King’s army and was very famous for his bravery all over the kingdom.
+The Trooper had a beautiful Horse, which was one of the best in the country. The Trooper loved his Horse a lot.
+One day, when all the soldiers were dressing their, horses, the Trooper noticed that a nail on one of the le Horse’s shoe had fallen off.
+Since, the Trooper was tired, he decided to repair, the shoe nail later. His fellow soldiers advised him to end the shoe-nail soon, or it could become dangerous.
+The Trooper did not listen to them.</br />
+&nbsp;&nbsp;&nbsp;After some time, the soldiers heard the sound of the trumpet.
+The enemy had attacked the King’s palace, and all the soldiers went to fight. The Trooper also sat on his Horse and went to fight the enemy. On the way, the Horse’s loose shoe fell off. He stumbled and the Trooper fell on the ground. He was badly hurt and could not get up. An enemy soldier killed him with a sword, immediately.
+			</p>
+	</div>
+	
+	<p><a href="#s11" class="ui-btn ui-shadow ui-corner-all">Moral Lesson</a></p>
+			<div data-role="footer" data-position="fixed" data-theme="b">
+					<div data-role="navbar" >
+					<ul>
+								
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#list4" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+								
+					</ul>
+					</div>
+		</div>
+</div>
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="s11" data-theme="b">
+
+	<div data-role="header">
+		<h1>Moral Lesson</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p align="justify"  >A stitch in time saves nine.</p>
+		
+
+	
+</div><!-- /page two -->
+<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#story11" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+
+<div data-role="page" id="story12" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>The Hodge and the Crow</b></h2>
+			<p align="justify"  >&nbsp;&nbsp;&nbsp;A Crow built her nest in a forest. It was on a high branch of a sturdy tree. One morning, she laid five eggs in it. She sat over her newly laid eggs to hatch them.
+One day, when the weather was sunny, the Crow was thinking about her soon-to-be-hatched chicks.
+Suddenly, a strong wind swept across the forest. <br />
+&nbsp;&nbsp;&nbsp;The branch, on which the Crow was sitting, shookwildly. She got scared and thought that the wind might break the branch on which she had built her nest. So, the Crow carefully carried her nest to a lower branch. Now the Crow was happy as her eggs were safe.
+&nbsp;&nbsp;&nbsp;By evening, the weather calmed down.</br />
+In that neighbourhood, lived a Hodge. He had been watching the Crow’s eggs for many days. He often thought about climbing the tree, but knew that the nest was too high for him.
+Then, to his surprise, he saw the Crow’s nest on a low branch. When the Crow left the nest, the greedy Hodge quickly climbed the tree. He carried the eggs away and ate them. The Crow lost her babies by being too careful!
+</p>
+	</div>
+	
+	<p><a href="#s12" class="ui-btn ui-shadow ui-corner-all">Moral Lesson</a></p>
+			<div data-role="footer" data-position="fixed" data-theme="b">
+					<div data-role="navbar" >
+					<ul>
+								
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#list4" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+								
+					</ul>
+					</div>
+		</div>
+</div>
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="s12" data-theme="b">
+
+	<div data-role="header">
+		<h1>Moral Lesson</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p align="justify"  >Being too careful can also be be dangerous.</p>
+		
+
+	
+</div><!-- /page two -->
+<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#story12" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="story13" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>The Two Lizards</b></h2>
+			<p align="justify"  >&nbsp;&nbsp;&nbsp;On a warm winter morning, two Lizards sat on a high wall of an old mill. They were enjoying the bright sunshine. One Lizard kept dreaming all the time and was unhappy. The other was older and wiser.
+“How miserable is our situation!” cried the Unhappy Lizard. “No one notices us. We are small and have such dull lives. Look at the other bigger animals. They are so royal and majestic!”
+The Unhappy Lizard sighed, “I wish I was born a deer. To be quick and have great, big horns! And live proudly in the royal forest.”
+At that very moment, a pack of dogs ran past, chasing a deer. The deer was tired and the hungry dogs pounced on it.
+The Lizards watched in horror.<br />
+&nbsp;&nbsp;&nbsp;The Wise Lizard said to his complaining friend, “You wanted to be in place of this poor deer!”
+“You should learn from what you just saw. You are not beautifully coloured or quick on your feet. But, you are alive! Destiny is kind to you. You are small and safe from danger, unlike the bigger animals!”
+</p>
+	</div>
+	
+	<p><a href="#s13" class="ui-btn ui-shadow ui-corner-all">Moral Lesson</a></p>
+			<div data-role="footer" data-position="fixed" data-theme="b">
+					<div data-role="navbar" >
+					<ul>
+								
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#list4" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+								
+					</ul>
+					</div>
+		</div>
+</div>
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="s13" data-theme="b">
+
+	<div data-role="header">
+		<h1>Moral Lesson</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p align="justify"  >Be Happy With What You Are.</p>
+		
+
+	
+</div><!-- /page two -->
+<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#story13" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="story14" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>Hospital Window</b></h2>
+			<p align="justify"  >&nbsp;&nbsp;&nbsp;Two men, both seriously ill, occupied the same hospital room.
+One man was allowed to sit up in his bed for an hour each afternoon to help drain the fluid from his lungs.
+His bed was next to the room’s only window.
+The other man had to spend all his time flat on his back.
+The men talked for hours on end.
+They spoke of their wives and families, their homes, their jobs, their involvement in the military service, where they had been on VACATION.
+<br />
+&nbsp;&nbsp;&nbsp;Every afternoon,  when the man in the bed by the window could sit up, he would pass the time by describing to his roommate all the things he could see outside the window.
+The man in the other bed began to live for those one hour periods where his world would be broadened and enlivened by all the activity and color of the world outside.
+The window overlooked a park with a lovely lake.
+Ducks and swans played on the water while children sailed their model boats. Young lovers walked arm in arm amidst FLOWERS of every color and a fine view of the city skyline could be seen in the distance.
+As the man by the window described all this in exquisite details, the man on the other side of the room would close his eyes and imagine this picturesque scene.
+<br />&nbsp;&nbsp;&nbsp;One warm afternoon, the man by the window described a parade passing by.
+Although the other man could not hear the band, he could see it in his mind’s eye as the gentleman by the window portrayed it with descriptive words.
+Days, weeks and months passed.
+<br />&nbsp;&nbsp;&nbsp;One morning, the day nurse arrived to bring water for their baths only to find the lifeless body of the man by the window, who had died peacefully in his sleep.
+She was saddened and called the hospital attendants to take the body away.
+As soon as it seemed appropriate, the other man asked if he could be moved next to the window. The nurse was happy to make the switch, and after making sure he was comfortable, she left him alone.
+Slowly, painfully, he propped himself up on one elbow to take his first look at the real world outside.
+He strained to slowly turn to look out the window beside the bed.
+It faced a blank wall.
+<br />&nbsp;&nbsp;&nbsp;The man asked the nurse what could have compelled his deceased roommate who had described such wonderful things outside this window.
+The nurse responded that the man was BLIND AND could not even see the wall.
+She said, ‘Perhaps he just wanted to encourage you.’</p>
+	</div>
+	
+	<p><a href="#s14" class="ui-btn ui-shadow ui-corner-all">Moral Lesson</a></p>
+			<div data-role="footer" data-position="fixed" data-theme="b">
+					<div data-role="navbar" >
+					<ul>
+								
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#list4" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+								
+					</ul>
+					</div>
+		</div>
+</div>
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="s14" data-theme="b">
+
+	<div data-role="header">
+		<h1>Moral Lesson</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p align="justify"  >There is tremendous happiness in making others happy, despite our own situations.
+Shared grief is half the sorrow, but happiness when shared, is doubled.
+If you want to feel rich, just count all the things you have that money can’t buy.
+‘Today is a gift, that is why it is called   The Present.’</p>
+		
+
+	
+</div><!-- /page two -->
+<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#story14" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="story15" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>The Proud Lady and the Caterpillar</b></h2>
+			<p align="justify"  >&nbsp;&nbsp;&nbsp;A young Lady had a wonderful garden. She took great care of it. One day, she was walking in her beautiful garden and admiring the colourful FLOWERS. She saw the trees laden with juicy fruits and clapped her hands with joy.
+Suddenly, the Lady saw a Caterpillar on her dress. She was horrified.
+The Lady shook him off her dress, saying angrily, “Go away, you ugly Caterpillar!    You eat all the leaves, FLOWERS and fruits and ruin my lovely garden. I work so hard to keep my garden beautiful. You spoil it by being here.”
+The Caterpillar looked at her and said calmly, “Proud Lady, I am ugly to look at now Soon, I shall turn into a beautiful Butterfly. The lovely silk of your dress has come from insects like me, so, do not insult me.”
+“You will be jealous of me, when I become a Butterfly! Since, then I shall be more colourful and beautiful than you.”<br />
+&nbsp;&nbsp;&nbsp;The Caterpillar continued, “We are greatly puzzled by you. Your beauty is temporary. Without your clothes, you look like a Caterpillar. Only when you dress up in colourful clothes do you become a Butterfly!”
+
+
+
+			
+			</p>
+	</div>
+	
+	<p><a href="#s15" class="ui-btn ui-shadow ui-corner-all">Moral Lesson</a></p>
+			<div data-role="footer" data-position="fixed" data-theme="b">
+					<div data-role="navbar" >
+					<ul>
+								
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#list4" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+								
+					</ul>
+					</div>
+		</div>
+</div>
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="s15" data-theme="b">
+
+	<div data-role="header">
+		<h1>Moral Lesson</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p align="justify"  >True beauty does not lie in clothes.</p>
+		
+
+	
+</div><!-- /page two -->
+<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#story15" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+
+<div data-role="page" id="story16" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>The Paper Kite</b></h2>
+			<p align="justify"  >&nbsp;&nbsp;&nbsp;A beautiful Paper Kite was flying high in the sky. It was brightly coloured, with long, curly tassels and a long string.
+The Paper Kite was so high up, above all the trees and other kites, that it was giddy with excitement.
+Admiring itself, it said loudly, “0 look at me flying so gracefully! If I were free, I could go far away.”
+The Paper Kite tugged at its string, as it wanted to fly right through the clouds and above the eagles.
+However, the string was strong and held it tight.<br />
+&nbsp;&nbsp;&nbsp;The Paper Kite impatiently tugged at its string again, and the string broke.
+The Paper Kite was full of joy. It tried to fly higher but suddenly, it started falling. The Paper Kite tried with all its might to stay up, but it kept coming down. Free of its string, the Paper Kite had become too heavy and could not control itself. It drifted towards the sea and was washed away in the tide.
+The Paper Kite cried, “O poor me! I wanted to fly higher and higher. Look what I got for being so proud.”
+
+			
+			</p>
+	</div>
+	
+	<p><a href="#s16" class="ui-btn ui-shadow ui-corner-all">Moral Lesson</a></p>
+			<div data-role="footer" data-position="fixed" data-theme="b">
+					<div data-role="navbar" >
+					<ul>
+								
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#list5" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+								
+					</ul>
+					</div>
+		</div>
+</div>
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="s16" data-theme="b">
+
+	<div data-role="header">
+		<h1>Moral Lesson</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p align="justify"  >The proud and careless always suffer.</p>
+		
+
+	
+</div><!-- /page two -->
+<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#story16" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+
+<div data-role="page" id="story17" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>The Clever Wife</b></h2>
+			<p align="justify"  >&nbsp;&nbsp;&nbsp;There lived a Woman whose Husband had a bad habit. The man would drink a lot every day. This caused him to lose his normal senses for most of the time.
+The Woman tried many times to help him get out of this habit. But all her efforts went in vain!
+Every night, someone else would have to bring him back home. One such night when he was brought home, the Woman had him carried to a grave in the neighbourhood. She thought she could teach him a good lesson by frightening him and then he would stop his bad habit.
+Then she dressed herself in a dark-coloured dress. She wore a mask upon her face. She waited for him to wake up.
+When the Woman saw her Husband returning to his senses, she moved towards him with a serious face. Then, she gave him some food to eat and spoke loudly, “Get up and eat, it is my job to bring food for the dead.”
+The Husband was very scared. He ran home at once. From that day onwards, he gave up his bad habit.
+			
+			</p>
+	</div>
+	
+	<p><a href="#s17" class="ui-btn ui-shadow ui-corner-all">Moral Lesson</a></p>
+			<div data-role="footer" data-position="fixed" data-theme="b">
+					<div data-role="navbar" >
+					<ul>
+								
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#list5" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+								
+					</ul>
+					</div>
+		</div>
+</div>
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="s17" data-theme="b">
+
+	<div data-role="header">
+		<h1>Moral Lesson</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p align="justify"  >We must leave our bad habits.</p>
+		
+
+	
+</div><!-- /page two -->
+<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#story17" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="story18" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>The Mice who Travelled</b></h2>
+			<p align="justify"  >&nbsp;&nbsp;A Mouse, tired of living in constant fear, said to her neighbour, “I read about a place called Indies where Mice are safer. The people there believe that the soul of a Mouse has been in the body of a great person. After the Mouse dies, it will re-enter the body of another great person. That’s why Mice are treated affectionately there. Even hospitals are built for them. Let us go to this country and live happily.”
+The neighbour replied, “Don’t Cats enter these hospitals? If they do, then the Mice would be dying, quickly and in great numbers.”
+“Fear not,” said the first Mouse. “The Cats have their houses and hospitals far away from ours.”
+The Mice then crept into a ship, which was set to sail. After a long journey, they reached Indies.
+There, the Mice entered a house, expecting a warm welcome. However, the Indian Mice fought with the newly arrived Mice. Instead of being eaten up by Cats, they were killed by their own kind.
+
+			
+			</p>
+	</div>
+	
+	<p><a href="#s18" class="ui-btn ui-shadow ui-corner-all">Moral Lesson</a></p>
+			<div data-role="footer" data-position="fixed" data-theme="b">
+					<div data-role="navbar" >
+					<ul>
+								
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#list5" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+								
+					</ul>
+					</div>
+		</div>
+</div>
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="s18" data-theme="b">
+
+	<div data-role="header">
+		<h1>Moral Lesson</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p align="justify"  >Be wise and stay away from danger.</p>
+		
+
+	
+</div><!-- /page two -->
+<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#story18" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+
+<div data-role="page" id="story19" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>The Dogs</b></h2>
+			<p align="justify"  >&nbsp;&nbsp;One morning, a Hunter was following an animal. He tied his Dogs in pairs, so that they would hunt in an orderly way, and not pull in different directions.
+Jowler and Vixen were tied together as a couple. They were both young and new to hunting. The two Dogs were good friends and always played together. They took each other’s sides in a quarrel. The other Dogs thought that they would be good partners.
+However, they acted strangely when tied together. They both liked to go in opposite directions and walk in a different manner. Both of them would pull the other in different directions and soon this would end in a quarrel. Jowler, the male, treated Vixen, the female, badly.
+He did not take care to lead Vixen properly or kindly.
+An old Dog watching the two Dogs fight with each other, scolded them, “Silly Puppies, why are you always fighting with each other? Why don’t you ask what the other wants? Then you can both be at peace! I realized this when I was in the similar situation as you.”</p>
+		
+			
+			</p>
+	</div>
+	
+	<p><a href="#s19" class="ui-btn ui-shadow ui-corner-all">Moral Lesson</a></p>
+			<div data-role="footer" data-position="fixed" data-theme="b">
+					<div data-role="navbar" >
+					<ul>
+								
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#list5" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+								
+					</ul>
+					</div>
+		</div>
+</div>
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="s19" data-theme="b">
+
+	<div data-role="header">
+		<h1>Moral Lesson</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p align="justify"  >Joint agreement is necessary for a good partnership.</p>
+		
+
+	
+</div><!-- /page two -->
+<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#story19" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+
+<div data-role="page" id="story20" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+			<div data-role="content" data-theme="f">
+			<h2 align="center" style="color:#10bd8e;"><b>The Parrot</b></h2>
+			<p align="justify"  >&nbsp;&nbsp;An Old Man was very lonely because his wife had died. He missed her very much, especially their meal-time talk and laughter.
+One day, the Old Man decided to buy a Parrot. He thought a Parrot would be the best pet to have, because it could actually talk to him.
+The next morning, the Old Man visited the Pet Shop. The shop owner showed him several Parrots. One called for a coach, another asked for a drink and one just made noises! Only one Parrot sat quietly.
+The Old Man wondered why it was silent. The Parrot replied, “I think more!” The Old Man thought happily, Ah!  What a wise bird!’ Then, he bought the silent Parrot.
+Now every day, the Old Man tried to teach his new pet to talk, sing or make a new sound. Sadly, the Parrot refused to learn anything new It would only repeat, “I think more!”
+The disappointed Old Man angrily said, “Oh Parrot, you are a fool! Alas, I am a bigger fool than you, because I believed that you were wise, simply because you pretended to think more!”
+
+
+			
+			</p>
+	</div>
+	
+	<p><a href="#s20" class="ui-btn ui-shadow ui-corner-all">Moral Lesson</a></p>
+			<div data-role="footer" data-position="fixed" data-theme="b">
+					<div data-role="navbar" >
+					<ul>
+								
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#list5" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+								
+					</ul>
+					</div>
+		</div>
+</div>
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="s20" data-theme="b">
+
+	<div data-role="header">
+		<h1>Moral Lesson</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p align="justify"  >Do not be fooled by those who pretend to be wise.</p>
+		
+
+	
+</div><!-- /page two -->
+<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#story20" data-icon="back" data-transition="pop">Back</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+<!--about--
+<div data-role="page" id="about" data-theme="b" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+	<div data-role="content" data-theme="f">
+	<h2 align="center" style="color:#10bd8e;"><b>First Aid</b></h2>
+	<p align="justify"  ><i>The person should be encouraged to use the principles of 'paying the PRICE' and 'avoiding HARM' for the first 48-72 hours after the injury.</i><br /><br />
+		• <b>Protection:</b> from further injury. <br /><br />
+		• <b>Rest:</b> for the first 48-72 hours after injury, activity should be avoided. The use of crutches can be considered for lower limb injuries. <br /><br />
+		• <b>Ice:</b> a specialised ice pack (or a bag of frozen peas) wrapped in a cloth can be applied for 15-20 minutes every 2-3 hours for the first 48-72 hours after injury.<br /><br />
+		• <b>Compression:</b> helps to reduce swelling. An elastic bandage can be applied around the affected limb. Remove at night. Ensure that the bandage is not too tight.<br /><br />
+		• <b>Elevation:</b> as far as possible, elevate the injured area above the level of the heart for the first 48-72 hours, ensuring that it is comfortably supported.<br /><br /><br />
+		<b>Avoid HARM for the first 72 hours after the injury:</b><br /><br />
+		• <b>Heat:</b> including heat packs, hot baths, saunas.<br /><br />
+		• <b>Alcohol:</b> this can increase swelling and bleeding.<br /><br />
+		• <b>Running:</b> or other forms of exercise.<br /><br />
+		• <b>Massage:</b> this can increase swelling and bleeding.<br /><br />
+		<i>The person can take analgesia as needed. However, it is generally suggested that oral non-steroidal anti-inflammatory drugs (NSAIDs) be avoided for the first 48 hours after injury as there is some evidence that they may delay healing.</i>
+	</p><br /><br /><hr />
+	<p align="right" style="font-size:11px; color:#cc0000;">Developed by: Sarah Jean Palaganas | BSIT-4A | Gordon College</p>
+	</div>
+	<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">Home</a></li>
+		<li><a href="#about" data-icon="info" data-transition="slidefade" data-theme="e"a>About</a></li>
+		
+		</ul>
+	</div>
+	</div>
+</div>
+
+
+<!-- GAME -->
+<div data-role="page" id="game" data-theme="f" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+	<div data-role="content">
+	<a href="#questionScience" id="btnPlay" data-role="button" data-transition="pop" data-icon="carat-r" data-iconpos="right">START GAME</a>
+	</div>
+	<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-role="button" data-transition="pop" data-icon="back" data-iconpos="top">BACK</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<!-- PLAYGAME -->
+<div data-role="page" id="questionScience" data-theme="f" data-position="fixed" style="background-image:url('images/bg.png'); background-size:cover; background-repeat:no-repeat;">
+	<div data-role="content" data-theme="b" style="background-image:url('images/bg.jpg')">
+		<div id="relative" style="color:#000066; font-family: 'Century Gothic';">
+		<center>
+		<h4 id="timer">TIME</h4>
+		<h4 id="showTimer" style="font-family: 'Century Gothic';"></h4>
+		<h4 id="score">SCORE</h4>
+		<h4 id="asd" style="margin-left: auto; margin-top: auto; font-family: 'Century Gothic';"></h4>
+		
+		<span id="count"></span>
+		
+		<h4 id="prog2"></h4>
+		<h4 id="questions"></h4>
+	</center>
+
+<a data-role="button" id="check1" class="q1" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c1"></span></a>
+<a data-role="button" id="check2" class="q1" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c2"></span></a>
+<a data-role="button" id="check3" class="q1" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c3"></span></a>
+<a data-role="button" id="check4" class="q2" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c4"></span></a>
+<a data-role="button" id="check5" class="q2" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c5"></span></a>
+<a data-role="button" id="check6" class="q2" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c6"></span></a>
+<a data-role="button" id="check10" class="q4" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c10"></span></a>
+<a data-role="button" id="check11" class="q4" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c11"></span></a>
+<a data-role="button" id="check12" class="q4" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c12"></span></a>
+<a data-role="button" id="check13" class="q5" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c13"></span></a>
+<a data-role="button" id="check14" class="q5" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c14"></span></a>
+<a data-role="button" id="check15" class="q5" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c15"></span></a>
+<a data-role="button" id="check16" class="q6" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c16"></span></a>
+<a data-role="button" id="check17" class="q6" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c17"></span></a>
+<a data-role="button" id="check18" class="q6" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c18"></span></a>
+<a data-role="button" id="check19" class="q7" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c19"></span></a>
+<a data-role="button" id="check20" class="q7" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c20"></span></a>
+<a data-role="button" id="check21" class="q7" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c21"></span></a>
+<a data-role="button" id="check22" class="q8" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c22"></span></a>
+<a data-role="button" id="check23" class="q8" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c23"></span></a>
+<a data-role="button" id="check24" class="q8" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c24"></span></a>
+<a data-role="button" id="check25" class="q9" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c25"></span></a>
+<a data-role="button" id="check26" class="q9" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c26"></span></a>
+<a data-role="button" id="check27" class="q9" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c27"></span></a>
+<a data-role="button" id="check28" class="q10" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c28"></span></a>
+<a data-role="button" id="check29" class="q10" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c29"></span></a>
+<a data-role="button" id="check30" class="q10" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c30"></span></a>
+<a data-role="button" id="check31" class="q11" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c31"></span></a>
+<a data-role="button" id="check32" class="q11" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c32"></span></a>
+<a data-role="button" id="check33" class="q11" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c33"></span></a>
+<a data-role="button" id="check34" class="q12" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c34"></span></a>
+<a data-role="button" id="check35" class="q12" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c35"></span></a>
+<a data-role="button" id="check36" class="q13" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c36"></span></a>
+<a data-role="button" id="check37" class="q13" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c37"></span></a>
+<a data-role="button" id="check38" class="q13" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c38"></span></a>
+<a data-role="button" id="check39" class="q14" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c39"></span></a>
+<a data-role="button" id="check40" class="q14" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c40"></span></a>
+<a data-role="button" id="check41" class="q14" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c41"></span></a>
+<a data-role="button" id="check42" class="q15" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c42"></span></a>
+<a data-role="button" id="check43" class="q15" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c43"></span></a>
+<a data-role="button" id="check44" class="q15" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c44"></span></a>
+<a data-role="button" id="check45" class="q16" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c45"></span></a>
+<a data-role="button" id="check46" class="q16" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c46"></span></a>
+<a data-role="button" id="check47" class="q16" style="display:none; font-family: 'Century Gothic'; background-color:#ebfe1c;"><span id="c47"></span></a>
+
+<button id="splice" style="display:none;" onClick="splice()">next</button>
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-theme="f">
+	<div data-role="navbar">
+		<ul>
+		<li><a href="#index" data-icon="home" data-transition="pop">QUIT GAME</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<!-- save online dialog-->
+<div data-role="page" data-theme="b" data-position="fixed" id="saveDialog" style="background-image:url('images/bg.jpg')">
+	<img id="result"/>
+		<div data-role="content">
+		<div id="relative2" style="color:#000066;">
+		<center><h1 id="tryAgain" style="font-family: 'Century Gothic'"></h1></center>
+		<form id="savedata" action="javascript:saveOnline();">
+		<center>
+		<h1 style="font-size:20px; font-family: 'Century Gothic';">Your Last Score : </h1><input type="text" id="lastscore" disabled style="font-size:20px; text"/>
+		<h1 style="font-size:20px; font-family: 'Century Gothic';">Your New Score : </h1><input type="text" id="score" name="score" style="display:none;"/>
+		<h1 id="score2" style="font-size:20px;"></h1>
+		<input type="text" id="username" name="username" style="display:none;">
+		</center>
+		</form>
+		<div data-role="footer" data-position="fixed" data-theme="f">
+		<div data-role="navbar">
+		<ul>
+		<li><a href="#game" data-role="button" data-transition="pop" data-icon="back" data-iconpos="top">BACK</a></li>
+		</ul>
+	</div>
+	</div>
+		</div>
+		</div>
+</div>
+
+<script>
+	$("#playAgain").click(function(){
+		location.href="#home";
+		location.reload();
+		var score=window.localStorage.getItem("score");
+		var changeScore=window.localStorage.setItem("lastscore",score);
+	});
+		$("#saveScore").click(function(){
+		location.href="#home";
+		var score=window.localStorage.getItem("score");
+		window.localStorage.setItem("lastscore",score);
+	});
+
+//save online
+function saveOnline(){
+
+var form = $("#savedata");
+         				$.getJSON("phpfiles/savescore.php?callback=?", form.serialize(),function(data)
+         				{
+						alert("Success! Your score is saved.")
+						location.href="home.html";
+						var score=window.localStorage.getItem("score");
+						window.localStorage.setItem("lastscore",score);
+         				}).fail(function(data){
+         				alert("Failed to Save");
+         				});
+}
+
+	// leaderboard get onLine
+	function loadAjax(){
+
+		var xmlhttp;
+		if(window.XMLHttpRequest){
+			xmlhttp = new XMLHttpRequest();
+		}else{
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.onreadystatechange=function(){
+			if(xmlhttp.readyState==4 && xmlhttp.status==200){
+				document.getElementById("inserthere").innerHTML=xmlhttp.responseText;
+		}}
+	xmlhttp.open("GET","phpfiles/leaderboard.php", true);
+		xmlhttp.send();
+	}
+	
+$("#menu").click(function(){
+$("#logout").slideToggle(100).click(function(){
+localStorage.removeItem("datauser");
+location.href="index.html";
+});
+});
+
+$("#back").click(function(){
+location.href="#home";
+});
+
+$("#quit").click(function(){
+location.href="home.html";
+});
+
+$("#btnPlay").click(function(){
+splice();
+});
+
+//questions
+var qqq = ["q1", "q2","q4","q5","q6","q7","q8","q9","q10","q11","q12","q13","q14","q15","q16"];
+var score=0;
+function splice(){
+document.getElementById("asd").innerHTML=score;
+var rand=Math.floor((Math.random() * 4));
+setTimeout(function(){
+var a=qqq.splice((Math.random() * qqq.length),1);
+if(a=="q1"){
+$(".q1").show();
+document.getElementById("questions").innerHTML="While walking along a residential sidewalk, you spot a wallet. Inside is P5000, a gift card worth P1000, credit and debit card, and a piece of paper with the owner's name, address, and phone number on it. What would you do?";
+$("#c1").text("Call the number and arrange for the wallet's return");
+$("#c2").text("Pocket the wallet and keep it");
+$("#c3").text("Throw the wallet back on the ground and walk away");
+$("#check1").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q1").hide();
+});
+$("#check2").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q1").hide();
+});
+$("#check3").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q1").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q2"){
+$(".q2").show();
+document.getElementById("questions").innerHTML="You exit the grocery store after buying P600 worth of groceries. You look at the receipt and notice that the cashier gave you P60 too much change. What would you do?";
+$("#c4").text("Pocket the change without thought");
+$("#c5").text("Nothing");
+$("#c6").text("Return the change to the cashier");
+$("#check4").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q2").hide();
+});
+$("#check5").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q2").hide();
+});
+$("#check6").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q2").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+}else if(a=="q4"){
+$(".q4").show();
+document.getElementById("questions").innerHTML="If your friend was being abused by her dad or boyfriend and confided in you, what would you do?";
+$("#c10").text("Keep it a secret for her, because that's what she asked you to do, but offer advice.");
+$("#c11").text("Tell people about it, just because it's interesting gossip.");
+$("#c12").text("Tell someone like police or a teacher to get her some help.");
+$("#check10").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q4").hide();
+});
+$("#check11").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q4").hide();
+});
+$("#check12").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q4").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q5"){
+$(".q5").show();
+document.getElementById("questions").innerHTML="You need to withdraw money from your bank account, so you go to an ATM. The machine makes a huge error and spits out P1000 by mistake. What would you do?";
+$("#c13").text("Go to the bank and return the money");
+$("#c14").text("Keep the money");
+$("#c15").text("Stuff the money back into the machine and act like it never happened");
+$("#check13").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q5").hide();
+});
+$("#check14").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q5").hide();
+});
+$("#check15").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q5").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q6"){
+$(".q6").show();
+document.getElementById("questions").innerHTML="You are in the parking lot of a grocery store. You notice a couple loading their groceries into their car. You see them getting into their car, leaving a 24-pack of soda on the bottom of the basket. What would you do?";
+$("#c16").text("Steal the soda");
+$("#c17").text("Approach the car before they pull away and tell them that they left their soda in the basket");
+$("#c18").text("Leave the soda there without doing anything");
+$("#check16").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q6").hide();
+});
+$("#check18").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q6").hide();
+});
+$("#check17").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q6").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);}
+
+else if(a=="q7"){
+$(".q7").show();
+document.getElementById("questions").innerHTML="While in school, you notice a frequently-bullied classmate with a piece of malunggay in his teeth. What would you do?";
+$("#c19").text("Ignore it");
+$("#c20").text("Start laughing; encourage others to join in");
+$("#c21").text("Kindly tell him");
+$("#check21").click(function(){
+score=score+1;
+clearInterval(time);
+splice();
+$(".q7").hide();
+});
+$("#check19").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q7").hide();
+});
+$("#check20").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q7").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q8"){
+$(".q8").show();
+document.getElementById("questions").innerHTML="You are in your social studies class. The teacher announces a class project, and asks students to pair up. You notice the kind, shy outcast being shunned. What would you do?";
+$("#c22").text("Pair with him");
+$("#c23").text("Ignore him and pair with your friend");
+$("#c24").text("Ask the teacher for an exemption and do a group with he and your friend");
+$("#check23").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q8").hide();
+});
+$("#check24").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q8").hide();
+});
+$("#check22").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q8").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q9"){
+$(".q9").show();
+document.getElementById("questions").innerHTML="Walking through the hallway at school, you notice a small crowd. When you approach the crowd, you see three bigger students tormenting a helpless smaller student. The smaller student is being held up against a locker, being robbed of money and belongings, yelled and laughed at, and suffering greatly. The crowd has joined in. What do you do?";
+$("#c25").text("Go in and stand up to the bullies and crowd");
+$("#c26").text("Tell a staff member");
+$("#c27").text("Ignore the situation");
+$("#check25").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q9").hide();
+});
+$("#check27").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q9").hide();
+});
+$("#check26").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q9").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q10"){
+$(".q10").show();
+document.getElementById("questions").innerHTML="You are listening to music one morning when you get a call (or a door visit) from a neighbor. The neighbor asks that you turn down the music so that he/she can read in peace and enjoy his/her backyard. What would you do?";
+$("#c28").text("Turn it down, then turn it back up a few minutes later");
+$("#c29").text("Apologize; turn it down to a reasonable level");
+$("#c30").text("Screw you! If it's too loud, you're too old!");
+$("#check29").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q10").hide();
+});
+$("#check28").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q10").hide();
+});
+$("#check30").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q10").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q11"){
+$(".q11").show();
+document.getElementById("questions").innerHTML="You put 15 coins into a soda machine and press the button for a soda. Two sodas tumble out. What would you do?";
+$("#c31").text("Go to a nearby staff member of the establishment where you are and report the error");
+$("#c32").text("Give the soda to a passer-by");
+$("#c33").text("Keep the soda and drink it");
+$("#check31").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q11").hide();
+});
+$("#check32").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q11").hide();
+});
+$("#check33").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q11").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q12"){
+$(".q12").show();
+document.getElementById("questions").innerHTML="Honesty is the best policy";
+$("#c34").text("True");
+$("#c35").text("False");
+$("#check34").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q12").hide();
+});
+$("#check35").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q12").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q13"){
+$(".q13").show();
+document.getElementById("questions").innerHTML="In the classroom discussion, your teacher asks the whole a certain question, which you feel that you are the only one, knows the answer. Then, your teacher calls your classmate to answer the question. Your teacher ask the your classmate to stand and answer the question. Everybody was waiting. What will you do?";
+$("#c36").text("Save your classmate by raising your hand to answer");
+$("#c37").text("Coach your answer to your classmate");
+$("#c38").text("Laugh at your classmate for he cant’ answer the question");
+$("#check36").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q13").hide();
+});
+$("#check37").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q13").hide();
+});
+$("#check38").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q13").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q14"){
+$(".q14").show();
+document.getElementById("questions").innerHTML="You know the identity of someone who has committed a serious crime resulting in a person being badly injured. Are you morally obliged to reveal their identity to an appropriate authority so that they are dealt with justly?";
+$("#c39").text("Weakly Obligated");
+$("#c40").text("Strongly Obligated");
+$("#c41").text("Not Obligated");
+$("#check40").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q14").hide();
+});
+$("#check39").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q14").hide();
+});
+$("#check41").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q14").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q15"){
+$(".q15").show();
+document.getElementById("questions").innerHTML="A friend tells you he's been using drugs, and he wants you to promise not to tell anyone. What will you do?";
+$("#c42").text("Don't promise. You know he's in trouble and he really needs help.");
+$("#c43").text("Promise, then tell your parents. ");
+$("#c44").text("Promise and don't tell anyone. ");
+$("#check42").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q15").hide();
+});
+$("#check43").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q15").hide();
+});
+$("#check44").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q15").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+
+}else if(a=="q16"){
+$(".q16").show();
+document.getElementById("questions").innerHTML="The day after your laptop stops working, you're caught in a riot. You notice that an electronics store is being looted. What would you do?";
+$("#c45").text("Go inside and grab a laptop");
+$("#c46").text("Ignore it");
+$("#c47").text("Wait and buy one later");
+$("#check45").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q16").hide();
+});
+$("#check46").click(function(){
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+$(".q16").hide();
+});
+$("#check47").click(function(){
+clearInterval(time);
+score=score+1;
+splice();
+$(".q16").hide();
+});
+var timer=15;
+var time=setInterval(function () {
+timer=timer-1;
+$("#showTimer").html(timer);
+if(timer==0){
+alert("Sorry! Your time is up.");
+window.localStorage.setItem("score",score);
+document.getElementById("tryAgain").innerHTML="Sorry! Game Over.";
+document.getElementById("score2").innerHTML= score;
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+clearInterval(time);
+}
+}, 1000);
+}else if(a=="" || qqq.length==0){
+qqq.splice(0,1);
+window.localStorage.setItem("score",score);
+var getScore=window.localStorage.getItem("score");
+document.getElementById("score").value=getScore;
+var getlastscore=window.localStorage.getItem("lastscore");
+document.getElementById("lastscore").value=getlastscore;
+var getUsername=window.localStorage.getItem("datauser");
+document.getElementById("username").value=getUsername;
+location.href="#saveDialog";
+}
+},1000);
+}
+
+</script>
+</body>
+</html>
